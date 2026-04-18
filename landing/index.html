@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer 360 Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">
+            <span class="brand-dot"></span>
+            <span>Customer 360 Analytics</span>
+          </div>
+          <div class="nav-links">
+            <a href="#overview">Обзор</a>
+            <a href="#analytics">Аналитика</a>
+            <a href="#churn">Отток</a>
+            <a href="#quality">Качество</a>
+            <a href="#loop">Цикл</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Комплексное аналитическое решение</span>
+            <h1>
+              От диагностики клиентских проблем до прогнозирования рисков и
+              персонализированного воздействия
+            </h1>
+            <p class="hero-text">
+              Витрина решения для кейса: данные, сегментация клиентов,
+              прогнозирование оттока, оценка качества товаров, базовый
+              прогноз продаж и логика рекомендательного контура.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#overview">Смотреть решение</a>
+              <a class="btn btn-secondary" href="#loop">Замкнутый цикл</a>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="metric-card accent">
+              <span class="metric-label">Churn model</span>
+              <strong>ROC-AUC 0.8109</strong>
+              <p>CatBoost на time-based snapshots</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Сегментация</span>
+              <strong>5 клиентских кластеров</strong>
+              <p>Core, VIP, Dormant, Return Sensitive</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Качество товаров</span>
+              <strong>Blacklist SKU</strong>
+              <p>Проблемные категории исключаются из рекомендаций</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Forecast</span>
+              <strong>Sales baseline</strong>
+              <p>Daily/weekly прогноз для закупочного планирования</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="overview" class="section">
+          <div class="section-head">
+            <span class="eyebrow">Статус кейса</span>
+            <h2>Что уже решено внутри проекта</h2>
+          </div>
+
+          <div class="status-grid">
+            <article class="status-card done">
+              <h3>Обработка данных и EDA</h3>
+              <ul>
+                <li>Первичный анализ транзакций, клиентов, товаров, событий</li>
+                <li>Очистка пропусков, дублей, mixed datetime, приведение типов</li>
+                <li>EDA по продажам, возвратам, логистике, каналам и географии</li>
+              </ul>
+            </article>
+            <article class="status-card done">
+              <h3>Feature Engineering</h3>
+              <ul>
+                <li>RFM-сегментация и ABC/XYZ-анализ</li>
+                <li>Поведенческие event-фичи</li>
+                <li>Логистические и review/NLP-признаки</li>
+              </ul>
+            </article>
+            <article class="status-card done">
+              <h3>Сегментация и Product Quality</h3>
+              <ul>
+                <li>Кластерный анализ клиентской базы</li>
+                <li>Проблемные категории и SKU с quality risk score</li>
+                <li>Флаг исключения товаров из рекомендаций</li>
+              </ul>
+            </article>
+            <article class="status-card progress">
+              <h3>Модели</h3>
+              <ul>
+                <li>Churn prediction и ranking факторов оттока</li>
+                <li>Sales forecasting baseline</li>
+                <li>Recommendation logic интегрируется командой</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="analytics" class="section section-alt">
+          <div class="section-head">
+            <span class="eyebrow">Interactive Dashboards</span>
+            <h2>Ключевые аналитические блоки</h2>
+          </div>
+
+          <div class="tabs-strip">
+            <a class="tab-pill active" href="#sales-dashboard">Sales Dashboard</a>
+            <a class="tab-pill" href="#customer">Customer Analytics</a>
+            <a class="tab-pill" href="#churn">Churn Monitoring</a>
+            <a class="tab-pill" href="#quality">Product Quality</a>
+            <a class="tab-pill" href="#reco">Recommendation Logic</a>
+            <a class="tab-pill" href="#storytelling">Data Storytelling</a>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="dashboard-card">
+              <h3>Анализ розничных продаж</h3>
+              <p>
+                Динамика выручки, top-категории и top-SKU, география продаж,
+                сезонность, базовый forecast продаж.
+              </p>
+              <div class="tag-row">
+                <span>Revenue</span>
+                <span>Top Products</span>
+                <span>Geography</span>
+                <span>Seasonality</span>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <h3>Клиентская аналитика</h3>
+              <p>
+                RFM-сегменты, клиентские кластеры, демография, поведенческие
+                паттерны, база для retention и personalization.
+              </p>
+              <div class="tag-row">
+                <span>RFM</span>
+                <span>Clusters</span>
+                <span>Age</span>
+                <span>Traffic</span>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <h3>Мониторинг оттока</h3>
+              <p>
+                Доля high-risk клиентов, churn score, ключевые триггеры ухода,
+                карта рисков по сегментам и категориям.
+              </p>
+              <div class="tag-row">
+                <span>Churn Score</span>
+                <span>Drivers</span>
+                <span>Risk Segments</span>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <h3>Recommendation Layer</h3>
+              <p>
+                Персональные предложения, исключение проблемных товаров и
+                retention-логика для клиентов с высоким риском оттока.
+              </p>
+              <div class="tag-row">
+                <span>Reco</span>
+                <span>Blacklist</span>
+                <span>Retention</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="sales-dashboard" class="section">
+          <div class="section-head">
+            <span class="eyebrow">Sales Dashboard</span>
+            <h2>Анализ розничных продаж</h2>
+          </div>
+
+          <div class="three-col compact">
+            <article class="info-card">
+              <span class="metric-label">Рост выручки</span>
+              <strong>3.6K -> 1.06M</strong>
+              <p>От января 2019 до марта 2026 по месячной выручке</p>
+            </article>
+            <article class="info-card">
+              <span class="metric-label">Средняя экономика</span>
+              <strong>margin 51.0%</strong>
+              <p>Средняя маржинальность line-level транзакций</p>
+            </article>
+            <article class="info-card">
+              <span class="metric-label">Логистика</span>
+              <strong>4.0 дня</strong>
+              <p>Средний полный срок доставки по заказам</p>
+            </article>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Top категории по выручке</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>Outerwear &amp; Coats</span><strong>2.49M</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>Jeans</span><strong>2.38M</strong><div class="bar"><i style="width:96%"></i></div></div>
+                <div class="bar-row"><span>Sweaters</span><strong>1.59M</strong><div class="bar"><i style="width:64%"></i></div></div>
+                <div class="bar-row"><span>Suits &amp; Sport Coats</span><strong>1.26M</strong><div class="bar"><i style="width:50%"></i></div></div>
+                <div class="bar-row"><span>Fashion Hoodies</span><strong>1.23M</strong><div class="bar"><i style="width:49%"></i></div></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>География продаж</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>Seoul</span><strong>287.6K</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>New York</span><strong>175.8K</strong><div class="bar"><i style="width:61%"></i></div></div>
+                <div class="bar-row"><span>Tokyo</span><strong>167.3K</strong><div class="bar"><i style="width:58%"></i></div></div>
+                <div class="bar-row"><span>Salvador</span><strong>127.4K</strong><div class="bar"><i style="width:44%"></i></div></div>
+                <div class="bar-row"><span>Busan</span><strong>117.0K</strong><div class="bar"><i style="width:41%"></i></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Сезонность по дням недели</h3>
+              <div class="weekday-grid detailed">
+                <div class="weekday-col">
+                  <span>Mon</span>
+                  <i style="height:94%"></i>
+                  <strong>2.99M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Tue</span>
+                  <i style="height:100%"></i>
+                  <strong>3.15M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Wed</span>
+                  <i style="height:92%"></i>
+                  <strong>2.90M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Thu</span>
+                  <i style="height:91%"></i>
+                  <strong>2.87M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Fri</span>
+                  <i style="height:92%"></i>
+                  <strong>2.89M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Sat</span>
+                  <i style="height:93%"></i>
+                  <strong>2.93M</strong>
+                </div>
+                <div class="weekday-col">
+                  <span>Sun</span>
+                  <i style="height:93.5%"></i>
+                  <strong>2.94M</strong>
+                </div>
+              </div>
+              <p class="caption">Выраженной недельной сезонности нет, но вторник показывает максимум по выручке.</p>
+            </div>
+
+            <div class="panel">
+              <h3>Top товары по выручке</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>The North Face Freedom Mens Ski Pants 2013</span><strong>24.4K</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>Darla</span><strong>18.0K</strong><div class="bar"><i style="width:74%"></i></div></div>
+                <div class="bar-row"><span>Quiksilver Men's Rockefeller Walkshort</span><strong>17.2K</strong><div class="bar"><i style="width:70%"></i></div></div>
+                <div class="bar-row"><span>JORDAN DURASHEEN SHORT</span><strong>17.2K</strong><div class="bar"><i style="width:70%"></i></div></div>
+                <div class="bar-row"><span>The North Face Women's Oso Jacket</span><strong>16.3K</strong><div class="bar"><i style="width:67%"></i></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Динамика выручки по дням</h3>
+                <span>PNG / export из notebook</span>
+              </div>
+              <div class="chart-frame">
+                <img src="./assets/plots/sales_daily_revenue.png" alt="Динамика выручки по дням" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+                <div class="chart-fallback">
+                  <div class="chart-line chart-line-1"></div>
+                  <div class="chart-line chart-line-2"></div>
+                  <span>Положите файл <code>sales_daily_revenue.png</code> в <code>landing/assets/plots/</code></span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Выручка по месяцам</h3>
+                <span>growth checkpoints</span>
+              </div>
+              <div class="chart-placeholder bars checkpoints">
+                <div class="checkpoint"><i style="height: 2%"></i><span>2019-01</span><strong>3.6K</strong></div>
+                <div class="checkpoint"><i style="height: 18%"></i><span>2025-10</span><strong>726.7K</strong></div>
+                <div class="checkpoint"><i style="height: 20%"></i><span>2025-12</span><strong>776.3K</strong></div>
+                <div class="checkpoint"><i style="height: 24%"></i><span>2026-01</span><strong>908.7K</strong></div>
+                <div class="checkpoint"><i style="height: 28%"></i><span>2026-02</span><strong>1.06M</strong></div>
+                <div class="checkpoint"><i style="height: 28.5%"></i><span>2026-03</span><strong>1.06M</strong></div>
+              </div>
+              <p class="caption">Для лендинга лучше показывать контрольные точки роста, чем полный bar chart с плотными подписями месяцев.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="customer" class="section">
+          <div class="section-head">
+            <span class="eyebrow">Customer Analytics</span>
+            <h2>Сегменты, RFM и поведенческие группы</h2>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>RFM-сегменты</h3>
+              <div class="mini-list">
+                <div><span>At Risk</span><strong>16,812</strong></div>
+                <div><span>Hibernating</span><strong>15,197</strong></div>
+                <div><span>Regular</span><strong>14,509</strong></div>
+                <div><span>Loyal Customers</span><strong>12,499</strong></div>
+                <div><span>Potential Loyalists</span><strong>10,625</strong></div>
+                <div><span>Champions</span><strong>10,379</strong></div>
+              </div>
+              <p class="caption">
+                Champions и Loyal Customers формируют наиболее ценный слой базы,
+                а At Risk и Hibernating являются основными целями retention.
+              </p>
+            </div>
+
+            <div class="panel">
+              <h3>Кластеры клиентов</h3>
+              <div class="mini-list">
+                <div><span>VIP / High Value</span><strong>Высокая выручка и вовлеченность</strong></div>
+                <div><span>Core Customers</span><strong>Стабильная база</strong></div>
+                <div><span>At Risk Dormant</span><strong>Высокая recency</strong></div>
+                <div><span>Return Sensitive</span><strong>Высокий возврат и негатив</strong></div>
+              </div>
+              <p class="caption">
+                Кластеры используются для персонализации стратегии удержания,
+                тональности коммуникации и продуктовых предложений.
+              </p>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Демография и возрастные группы</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>35-44</span><strong>4.18M</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>55-64</span><strong>3.55M</strong><div class="bar"><i style="width:85%"></i></div></div>
+                <div class="bar-row"><span>25-34</span><strong>3.52M</strong><div class="bar"><i style="width:84%"></i></div></div>
+                <div class="bar-row"><span>45-54</span><strong>3.49M</strong><div class="bar"><i style="width:83%"></i></div></div>
+                <div class="bar-row"><span>14-24</span><strong>3.42M</strong><div class="bar"><i style="width:82%"></i></div></div>
+                <div class="bar-row"><span>65+</span><strong>2.12M</strong><div class="bar"><i style="width:51%"></i></div></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Каналы привлечения</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>Search</span><strong>14.43M</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>Organic</span><strong>3.14M</strong><div class="bar"><i style="width:22%"></i></div></div>
+                <div class="bar-row"><span>Facebook</span><strong>1.20M</strong><div class="bar"><i style="width:8%"></i></div></div>
+                <div class="bar-row"><span>Email</span><strong>0.98M</strong><div class="bar"><i style="width:7%"></i></div></div>
+                <div class="bar-row"><span>Display</span><strong>0.85M</strong><div class="bar"><i style="width:6%"></i></div></div>
+              </div>
+              <p class="caption">Search является главным драйвером выручки и заказов при сопоставимом среднем чеке.</p>
+            </div>
+          </div>
+
+          <div class="panel wide">
+            <h3>LTV / Retention / Cohort logic</h3>
+            <p>
+              В текущей витрине уже собраны RFM, transaction history, tenure и behavioral signals. Это позволяет
+              расширить landing до cohort-аналитики, retention curves и LTV dashboard без изменения структуры решения.
+            </p>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>RFM-сегменты</h3>
+                <span>Готово для подстановки графика</span>
+              </div>
+              <div class="chart-frame">
+                <img src="./assets/plots/customer_rfm_segments.png" alt="RFM сегменты" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+                <div class="chart-fallback bars">
+                  <i style="height: 100%"></i><i style="height: 90%"></i><i style="height: 86%"></i>
+                  <i style="height: 74%"></i><i style="height: 63%"></i><i style="height: 61%"></i>
+                  <span>Положите файл <code>customer_rfm_segments.png</code> в <code>landing/assets/plots/</code></span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Кластеры клиентов</h3>
+                <span>Scatter / export из notebook</span>
+              </div>
+              <div class="chart-frame">
+                <img src="./assets/plots/customer_clusters.png" alt="Кластеры клиентов" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+                <div class="chart-fallback scatter">
+                  <span style="left:14%; top:70%"></span>
+                  <span style="left:19%; top:61%"></span>
+                  <span style="left:26%; top:65%"></span>
+                  <span style="left:38%; top:36%"></span>
+                  <span style="left:49%; top:58%"></span>
+                  <span style="left:58%; top:72%"></span>
+                  <span style="left:68%; top:28%"></span>
+                  <span style="left:77%; top:63%"></span>
+                  <span style="left:84%; top:47%"></span>
+                  <em>Положите файл <code>customer_clusters.png</code> в <code>landing/assets/plots/</code></em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="churn" class="section section-alt">
+          <div class="section-head">
+            <span class="eyebrow">Churn Monitoring</span>
+            <h2>Модель прогнозирования оттока</h2>
+          </div>
+
+          <div class="three-col">
+            <article class="info-card">
+              <span class="metric-label">Модель</span>
+              <strong>CatBoost</strong>
+              <p>Time-based snapshots, historical window + future inactivity target</p>
+            </article>
+            <article class="info-card">
+              <span class="metric-label">Основная метрика</span>
+              <strong>ROC-AUC 0.8109</strong>
+              <p>Рабочий churn MVP для ранжирования клиентского риска</p>
+            </article>
+            <article class="info-card">
+              <span class="metric-label">Top 10% risk</span>
+              <strong>Precision 0.995</strong>
+              <p>Находит наиболее рискованных клиентов для retention-кампаний</p>
+            </article>
+          </div>
+
+          <div class="panel wide">
+            <h3>Ключевые драйверы оттока</h3>
+            <div class="tag-row">
+              <span>is_loyal</span>
+              <span>favorite_brand</span>
+              <span>state</span>
+              <span>favorite_category</span>
+              <span>tenure_days_in_window</span>
+              <span>events_cnt</span>
+              <span>recency_days</span>
+              <span>avg_delivery_days</span>
+              <span>avg_shipping_delay_days</span>
+              <span>user_avg_sentiment_score</span>
+            </div>
+            <p class="caption">
+              Отток определяется сочетанием снижения активности, слабой
+              лояльности, ухудшения логистического опыта и негативного
+              клиентского фидбэка.
+            </p>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Результаты модели</h3>
+              <div class="mini-list">
+                <div><span>ROC-AUC</span><strong>0.8109</strong></div>
+                <div><span>PR-AUC</span><strong>0.9238</strong></div>
+                <div><span>Top 10% risk precision</span><strong>0.9950</strong></div>
+                <div><span>Top 10% risk recall</span><strong>0.1343</strong></div>
+                <div><span>High-risk mode</span><strong>Ranking / prioritization</strong></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Что значит high-risk сегмент</h3>
+              <p>
+                Модель используется как инструмент ранжирования риска, а не как жесткий binary classifier.
+                Это позволяет таргетировать retention-кампании на наиболее уязвимых клиентов и не тратить бюджет
+                на всю клиентскую базу сразу.
+              </p>
+            </div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Feature importance</h3>
+                <span>top drivers</span>
+              </div>
+              <div class="bar-list">
+                <div class="bar-row"><span>is_loyal</span><strong>30.09</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>favorite_brand</span><strong>8.26</strong><div class="bar"><i style="width:27%"></i></div></div>
+                <div class="bar-row"><span>state</span><strong>7.71</strong><div class="bar"><i style="width:26%"></i></div></div>
+                <div class="bar-row"><span>favorite_category</span><strong>5.15</strong><div class="bar"><i style="width:17%"></i></div></div>
+                <div class="bar-row"><span>tenure_days_in_window</span><strong>2.54</strong><div class="bar"><i style="width:9%"></i></div></div>
+                <div class="bar-row"><span>events_cnt</span><strong>2.39</strong><div class="bar"><i style="width:8%"></i></div></div>
+              </div>
+              <p class="caption">Даже с доминирующим сигналом loyalty модель остается многокомпонентной и учитывает категорию, регион и вовлеченность.</p>
+            </div>
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Risk prioritization</h3>
+                <span>operational view</span>
+              </div>
+              <div class="priority-stack">
+                <div class="priority-card high">
+                  <span>High Risk</span>
+                  <strong>Retention action</strong>
+                  <p>Top 10% risk segment: precision 0.995, immediate targeting for personalized offers.</p>
+                </div>
+                <div class="priority-card medium">
+                  <span>Medium Risk</span>
+                  <strong>Watchlist</strong>
+                  <p>Клиенты со снижением активности, которым важны мягкие коммуникации и безопасный ассортимент.</p>
+                </div>
+                <div class="priority-card low">
+                  <span>Low Risk</span>
+                  <strong>Base care</strong>
+                  <p>Стабильные клиенты, для которых важнее удержание качества сервиса, а не агрессивная реактивация.</p>
+                </div>
+              </div>
+              <p class="caption">Модель лучше использовать как инструмент ранжирования риска и приоритизации клиентских действий, а не как жесткий binary cutoff.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="quality" class="section">
+          <div class="section-head">
+            <span class="eyebrow">Product Quality</span>
+            <h2>Категории с наибольшим уровнем недовольства</h2>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Top quality risk categories</h3>
+              <div class="bar-list">
+                <div class="bar-row"><span>Suits &amp; Sport Coats</span><strong>0.1937</strong><div class="bar"><i style="width:100%"></i></div></div>
+                <div class="bar-row"><span>Pants</span><strong>0.1928</strong><div class="bar"><i style="width:99%"></i></div></div>
+                <div class="bar-row"><span>Jeans</span><strong>0.1926</strong><div class="bar"><i style="width:99%"></i></div></div>
+                <div class="bar-row"><span>Pants &amp; Capris</span><strong>0.1910</strong><div class="bar"><i style="width:99%"></i></div></div>
+                <div class="bar-row"><span>Blazers &amp; Jackets</span><strong>0.1895</strong><div class="bar"><i style="width:98%"></i></div></div>
+                <div class="bar-row"><span>Jumpsuits &amp; Rompers</span><strong>0.1892</strong><div class="bar"><i style="width:98%"></i></div></div>
+                <div class="bar-row"><span>Sleep &amp; Lounge</span><strong>0.1865</strong><div class="bar"><i style="width:96%"></i></div></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Логика исключения из рекомендаций</h3>
+              <p>
+                Для проблемных SKU рассчитывается quality risk score на основе
+                возвратов, негативных отзывов и логистического опыта.
+              </p>
+              <div class="rule-box">
+                <code>High Risk + достаточный объем заказов -> exclude_from_reco = 1</code>
+              </div>
+              <p class="caption">
+                Это снижает вероятность повторного негативного опыта и делает
+                recommendation-слой более безопасным для retention-сценариев.
+              </p>
+            </div>
+          </div>
+
+          <div class="panel wide">
+            <h3>SKU для исключения из рекомендаций</h3>
+            <div class="bar-list two-columns">
+              <div class="bar-row"><span>Jeans</span><strong>171</strong><div class="bar"><i style="width:100%"></i></div></div>
+              <div class="bar-row"><span>Sleep &amp; Lounge</span><strong>134</strong><div class="bar"><i style="width:78%"></i></div></div>
+              <div class="bar-row"><span>Underwear</span><strong>120</strong><div class="bar"><i style="width:70%"></i></div></div>
+              <div class="bar-row"><span>Pants</span><strong>110</strong><div class="bar"><i style="width:64%"></i></div></div>
+              <div class="bar-row"><span>Socks</span><strong>98</strong><div class="bar"><i style="width:57%"></i></div></div>
+              <div class="bar-row"><span>Suits &amp; Sport Coats</span><strong>80</strong><div class="bar"><i style="width:47%"></i></div></div>
+            </div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Категории с наибольшим quality risk</h3>
+                <span>bar chart / export из notebook</span>
+              </div>
+              <div class="chart-frame">
+                <img src="./assets/plots/product_quality_categories.png" alt="Категории с quality risk" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+                <div class="chart-fallback bars horizontal">
+                  <i style="width: 100%"></i><i style="width: 99%"></i><i style="width: 99%"></i>
+                  <i style="width: 98%"></i><i style="width: 97%"></i><i style="width: 96%"></i>
+                  <span>Положите файл <code>product_quality_categories.png</code> в <code>landing/assets/plots/</code></span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-slot">
+              <div class="chart-slot-head">
+                <h3>Excluded SKU by category</h3>
+                <span>bar chart / export из notebook</span>
+              </div>
+              <div class="chart-frame">
+                <img src="./assets/plots/product_quality_excluded_sku.png" alt="Excluded SKU by category" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+                <div class="chart-fallback bars horizontal">
+                  <i style="width: 100%"></i><i style="width: 78%"></i><i style="width: 70%"></i>
+                  <i style="width: 64%"></i><i style="width: 57%"></i><i style="width: 47%"></i>
+                  <span>Положите файл <code>product_quality_excluded_sku.png</code> в <code>landing/assets/plots/</code></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="forecast" class="section section-alt">
+          <div class="section-head">
+            <span class="eyebrow">Sales Forecasting</span>
+            <h2>Прогноз продаж для закупочного планирования</h2>
+          </div>
+
+          <div class="panel wide">
+            <p>
+              Реализован baseline forecast продаж на основе временного ряда,
+              лаговых и rolling-признаков. Модель улавливает общий уровень и
+              инерцию спроса, но остается чувствительной к резким spikes в конце
+              горизонта.
+            </p>
+            <div class="three-col compact">
+              <article class="info-card">
+                <span class="metric-label">Daily Revenue</span>
+                <strong>WAPE 0.4607</strong>
+              </article>
+              <article class="info-card">
+                <span class="metric-label">Daily Orders</span>
+                <strong>WAPE 0.4480</strong>
+              </article>
+              <article class="info-card">
+                <span class="metric-label">Статус</span>
+                <strong>Baseline</strong>
+                <p>Подходит как MVP и supporting module</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="reco" class="section">
+          <div class="section-head">
+            <span class="eyebrow">Recommendation Logic</span>
+            <h2>Как recommendation-слой встраивается в систему</h2>
+          </div>
+
+          <div class="flow-grid">
+            <div class="flow-card">
+              <h3>1. Профиль клиента</h3>
+              <p>RFM, кластер, любимые категории и бренды, история покупок, churn risk.</p>
+            </div>
+            <div class="flow-card">
+              <h3>2. Product filtering</h3>
+              <p>Из выдачи исключаются SKU с высоким quality risk и плохим пользовательским опытом.</p>
+            </div>
+            <div class="flow-card">
+              <h3>3. Retention strategy</h3>
+              <p>Клиентам с высоким churn score выдаются реактивационные предложения.</p>
+            </div>
+          </div>
+
+          <div class="panel wide">
+            <h3>Эффективность рекомендаций</h3>
+            <p>
+              Блок CTR, conversion to purchase, retention uplift и revenue from recommendations
+              будет подключен после финальной интеграции движка рекомендаций. В текущем решении landing уже
+              поддерживает продуктовый контур: профиль клиента, product blacklist и retention-trigger logic.
+            </p>
+          </div>
+        </section>
+
+        <section id="storytelling" class="section section-alt">
+          <div class="section-head">
+            <span class="eyebrow">Data Storytelling</span>
+            <h2>Ключевые инсайты и предложения для бизнеса</h2>
+          </div>
+
+          <div class="story-grid">
+            <article class="story-card">
+              <span>01</span>
+              <h3>Продажи растут, но спрос становится более волатильным</h3>
+              <p>
+                Выручка и число заказов устойчиво растут к концу горизонта, при этом ABC/XYZ показывает доминирование
+                сегмента AZ: товары значимы по выручке, но нестабильны по спросу.
+              </p>
+            </article>
+            <article class="story-card">
+              <span>02</span>
+              <h3>Главная зона retention — At Risk и Hibernating</h3>
+              <p>
+                RFM-сегментация показывает крупный слой клиентов с высокой давностью последней покупки. Это лучший
+                target для реактивационных кампаний и персональных предложений.
+              </p>
+            </article>
+            <article class="story-card">
+              <span>03</span>
+              <h3>Негативный опыт концентрируется в fit-sensitive категориях</h3>
+              <p>
+                Jeans, Pants, Suits &amp; Sport Coats и смежные категории дают высокий quality risk и значимый объем
+                исключаемых SKU. Их нужно фильтровать из recommendation-выдачи.
+              </p>
+            </article>
+            <article class="story-card">
+              <span>04</span>
+              <h3>Churn-модель подходит для приоритизации клиентов</h3>
+              <p>
+                CatBoost с ROC-AUC 0.8109 позволяет выделить high-risk слой и направить retention-бюджет туда, где
+                вероятность ухода максимальна и реактивация наиболее оправдана.
+              </p>
+            </article>
+          </div>
+
+          <div class="panel wide">
+            <h3>Рекомендуемая бизнес-стратегия</h3>
+            <div class="tag-row">
+              <span>Retain At Risk</span>
+              <span>Re-activate Hibernating</span>
+              <span>Protect Champions</span>
+              <span>Exclude Bad SKU</span>
+              <span>Use Search as growth channel</span>
+              <span>Improve logistics in risk segments</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="loop" class="section section-loop">
+          <div class="section-head">
+            <span class="eyebrow">Closed Loop</span>
+            <h2>Замкнутый цикл управления клиентским опытом</h2>
+          </div>
+
+          <div class="loop-grid">
+            <div class="loop-step">
+              <span>01</span>
+              <h3>Диагностика</h3>
+              <p>Дашборды показывают продажи, возвраты, сегменты и проблемные категории.</p>
+            </div>
+            <div class="loop-step">
+              <span>02</span>
+              <h3>Прогноз</h3>
+              <p>Churn model и forecast определяют риск ухода и будущую динамику спроса.</p>
+            </div>
+            <div class="loop-step">
+              <span>03</span>
+              <h3>Воздействие</h3>
+              <p>Recommendation-слой подбирает персональные и retention-oriented предложения.</p>
+            </div>
+            <div class="loop-step">
+              <span>04</span>
+              <h3>Мониторинг</h3>
+              <p>Дашборды оценивают эффект рекомендаций, качество сервиса и динамику удержания.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
