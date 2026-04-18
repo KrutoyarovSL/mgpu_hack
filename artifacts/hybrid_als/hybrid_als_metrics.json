@@ -1,0 +1,33 @@
+{
+  "model": "cmfrec.CMF_implicit",
+  "model_type": "hybrid implicit ALS / collective matrix factorization",
+  "top_n": 10,
+  "train_rows": 415281,
+  "test_rows": 130497,
+  "user_info_shape": [
+    80021,
+    41
+  ],
+  "item_info_shape": [
+    28833,
+    66
+  ],
+  "user_item_shape": [
+    138422,
+    6
+  ],
+  "production_recommendation_rows": 50000,
+  "production_recommended_users": 5000,
+  "eval": {
+    "evaluated_users": 2000,
+    "k": 10,
+    "product_hit_rate_at_k": 0.0,
+    "product_precision_at_k": 0.0,
+    "product_recall_at_k": 0.0,
+    "product_mrr_at_k": 0.0,
+    "category_hit_rate_at_k": 0.4465,
+    "category_precision_at_k": 0.0512,
+    "category_recall_at_k": 0.3640416666666667,
+    "category_mrr_at_k": 0.17466051587301587
+  }
+}
