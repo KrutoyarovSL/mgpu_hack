@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Final Lending</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Final Delivery</p>
+      <h1>Customer Experience Platform</h1>
+      <p class="lead">
+        Финальная обертка над кейсом: FastAPI для inference-логики, Streamlit для demo и BI-ready слой
+        для storytelling и дашбордов.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>FastAPI</h2>
+        <p>API-слой под churn scoring, retention recommendations и sales forecast.</p>
+        <pre><code>uvicorn final_lending.api:app --reload</code></pre>
+        <ul>
+          <li><code>/predict_churn/{user_id}</code></li>
+          <li><code>/recommend/{user_id}</code></li>
+          <li><code>/forecast_sales</code></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Streamlit Demo</h2>
+        <p>Интерактивная оболочка для выбора клиента и просмотра результатов модели.</p>
+        <pre><code>streamlit run final_lending/streamlit_app.py</code></pre>
+      </article>
+
+      <article class="card">
+        <h2>BI / Storytelling</h2>
+        <p>Используйте артефакты из <code>final_lending/artifacts</code> как слой выгрузки для DataLens, Superset, Power BI или Tableau.</p>
+      </article>
+    </section>
+
+    <section class="steps">
+      <h2>Как запускать</h2>
+      <ol>
+        <li>Подготовить данные: по умолчанию используются <code>m_pred/archive/data.csv</code> и <code>m_pred/archive/events.csv</code>.</li>
+        <li>Запустить API.</li>
+        <li>Запустить Streamlit.</li>
+        <li>При необходимости задать переменные <code>FINAL_LENDING_DATA_PATH</code>, <code>FINAL_LENDING_EVENTS_PATH</code>, <code>FINAL_LENDING_API_URL</code>.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

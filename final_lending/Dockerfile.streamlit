@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+ENV FINAL_LENDING_API_URL=http://api:8000
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY final_lending/requirements.txt /tmp/final_lending_requirements.txt
+RUN pip install --no-cache-dir -r /tmp/final_lending_requirements.txt
+
+COPY . /app
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "final_lending/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]

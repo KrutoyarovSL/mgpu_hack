@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: final_lending/Dockerfile.api
+    container_name: final_lending_api
+    environment:
+      FINAL_LENDING_DATA_PATH: /app/m_pred/archive/data.csv
+      FINAL_LENDING_EVENTS_PATH: /app/m_pred/archive/events.csv
+    ports:
+      - "8000:8000"
+
+  streamlit:
+    build:
+      context: ..
+      dockerfile: final_lending/Dockerfile.streamlit
+    container_name: final_lending_streamlit
+    depends_on:
+      - api
+    environment:
+      FINAL_LENDING_API_URL: http://api:8000
+    ports:
+      - "8501:8501"
