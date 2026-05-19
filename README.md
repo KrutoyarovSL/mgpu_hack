@@ -353,10 +353,7 @@ streamlit run final_lending/streamlit_app.py
 
 ## 📜 Лицензия
 
-MIT License — используйте свободно, упоминание авторов приветствуется.
+MIT 
 
 ---
 
-<p align="center">
-  Сделано на DATA_Хакатоне НИТУ МИСИС × Ростелеком 🥉
-</p>
