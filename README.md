@@ -413,6 +413,9 @@ Customer Experience Platform — это не просто набор ML-моде
 
 ---
 
+[Демонстрация работы приложения](https://drive.google.com/file/d/1u3fp18TXXNMdekKCvwvFeEHrWIQW0_Vv/view?usp=sharing)
+[Дашборды, метрики, инсайды их данных, ключевые графики](https://drive.google.com/file/d/1v2_On4m2mDGGCtug-5Ka8JrguhlhIirG/view?usp=sharing)
+
 ## 📜 Лицензия
 
 MIT 
