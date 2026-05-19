@@ -338,36 +338,7 @@ streamlit run final_lending/streamlit_app.py
 - **JSON-сериализация** numpy/pandas типов
 - **Environment-based configuration**
 
----
 
-## 📈 Скриншоты и графики
-
-> Положите PNG-файлы в `docs/images/` (или замените пути на свои)
-
-### Динамика продаж и каналы трафика
-
-![Каналы трафика и возраст](docs/images/customer_traffic_age.png)
-![Топ категорий и товаров](docs/images/sales_categories_products.png)
-
-### Сегментация клиентов
-
-![Кластеры клиентов](docs/images/customer_clusters.png)
-![RFM сегменты](docs/images/customer_rfm_segments.png)
-![ABC/XYZ](docs/images/abc_xyz_segments.png)
-
-### Качество товаров
-
-![Quality risk по категориям](docs/images/product_quality_categories.png)
-![SKU для исключения](docs/images/product_quality_excluded_sku.png)
-![Возвраты по категориям](docs/images/quality_returns_categories.png)
-
-### Прогноз продаж
-
-![Прогноз выручки](docs/images/sales_forecast.png)
-![Динамика выручки](docs/images/sales_daily_revenue.png)
-![Помесячная динамика](docs/images/sales_monthly_revenue.png)
-
----
 
 ## 👥 Команда «мисис сладкий подарок™»
 
